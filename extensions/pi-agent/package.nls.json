@@ -1,0 +1,16 @@
+{
+	"displayName": "Agent Workspace",
+	"description": "A multi-model coding agent for Agent coding.",
+	"viewContainer.title": "Agent",
+	"view.name": "Workspace",
+	"command.category": "Agent",
+	"command.focus": "Open Agent",
+	"command.setApiKey": "Set Provider API Key",
+	"command.newSession": "New Session",
+	"command.stop": "Stop Current Run",
+	"configuration.title": "Agent",
+	"configuration.provider.description": "The model provider used by Agent coding.",
+	"configuration.model.description": "The model ID used by Agent coding.",
+	"configuration.baseUrl.description": "Optional base URL for an OpenAI-compatible endpoint.",
+	"configuration.requireApproval.description": "Require approval before commands or file changes are applied."
+}

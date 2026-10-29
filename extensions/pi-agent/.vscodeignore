@@ -1,0 +1,13 @@
+.gitignore
+.vscodeignore
+test/**
+node_modules/**/*.d.ts
+node_modules/**/*.d.mts
+node_modules/**/*.d.cts
+node_modules/**/*.map
+node_modules/**/test/**
+node_modules/**/tests/**
+node_modules/**/docs/**
+node_modules/**/examples/**
+node_modules/**/src/**
+node_modules/**/*.md

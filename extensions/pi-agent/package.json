@@ -1,0 +1,141 @@
+{
+	"name": "agent-workspace",
+	"displayName": "%displayName%",
+	"description": "%description%",
+	"version": "0.1.0",
+	"publisher": "agent-coding",
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.109.0"
+	},
+	"categories": [
+		"AI",
+		"Other"
+	],
+	"main": "./src/extension.cjs",
+	"extensionKind": [
+		"workspace"
+	],
+	"activationEvents": [
+		"onStartupFinished",
+		"onView:piAgent.chat",
+		"onCommand:piAgent.focus",
+		"onCommand:piAgent.setApiKey"
+	],
+	"contributes": {
+		"viewsContainers": {
+			"secondarySidebar": [
+				{
+					"id": "piAgent",
+					"title": "%viewContainer.title%",
+					"icon": "media/pi-agent.svg"
+				}
+			]
+		},
+		"views": {
+			"piAgent": [
+				{
+					"id": "piAgent.chat",
+					"name": "%view.name%",
+					"type": "webview"
+				}
+			]
+		},
+		"commands": [
+			{
+				"command": "piAgent.focus",
+				"title": "%command.focus%",
+				"category": "%command.category%",
+				"icon": "$(sparkle)"
+			},
+			{
+				"command": "piAgent.setApiKey",
+				"title": "%command.setApiKey%",
+				"category": "%command.category%",
+				"icon": "$(key)"
+			},
+			{
+				"command": "piAgent.newSession",
+				"title": "%command.newSession%",
+				"category": "%command.category%",
+				"icon": "$(add)"
+			},
+			{
+				"command": "piAgent.stop",
+				"title": "%command.stop%",
+				"category": "%command.category%",
+				"icon": "$(debug-stop)"
+			}
+		],
+		"menus": {
+			"view/title": [
+				{
+					"command": "piAgent.newSession",
+					"when": "view == piAgent.chat",
+					"group": "navigation@1"
+				},
+				{
+					"command": "piAgent.setApiKey",
+					"when": "view == piAgent.chat",
+					"group": "navigation@2"
+				}
+			]
+		},
+		"configuration": {
+			"title": "%configuration.title%",
+			"properties": {
+				"piAgent.provider": {
+					"type": "string",
+					"default": "deepseek",
+					"enum": [
+						"deepseek",
+						"openai",
+						"anthropic",
+						"google",
+						"openrouter",
+						"custom"
+					],
+					"enumDescriptions": [
+						"DeepSeek",
+						"OpenAI",
+						"Anthropic",
+						"Google Gemini",
+						"OpenRouter",
+						"OpenAI-compatible endpoint"
+					],
+					"description": "%configuration.provider.description%"
+				},
+				"piAgent.model": {
+					"type": "string",
+					"default": "deepseek-v4-pro",
+					"description": "%configuration.model.description%"
+				},
+				"piAgent.baseUrl": {
+					"type": "string",
+					"default": "",
+					"description": "%configuration.baseUrl.description%"
+				},
+				"piAgent.requireApproval": {
+					"type": "boolean",
+					"default": true,
+					"description": "%configuration.requireApproval.description%"
+				}
+			}
+		},
+		"configurationDefaults": {
+			"chat.disableAIFeatures": true,
+			"workbench.welcomePage.experimentalOnboarding": false,
+			"workbench.secondarySideBar.defaultVisibility": "visibleInWorkspace"
+		}
+	},
+	"scripts": {
+		"test": "node --test test/*.test.cjs"
+	},
+	"dependencies": {
+		"@earendil-works/pi-coding-agent": "1.4.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/microsoft/vscode.git"
+	}
+}

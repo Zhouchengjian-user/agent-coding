@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Activity disclosure states</title>
+	<link rel="stylesheet" href="./panel.css">
+	<style>
+		/* finesse · component: activity-disclosure · register=product
+		 * states: default · hover · focus-visible · active · disabled · loading · error · success */
+		:root {
+			--vscode-sideBar-background: #18191b;
+			--vscode-editorWidget-background: #202225;
+			--vscode-input-background: #141517;
+			--vscode-widget-border: #34373b;
+			--vscode-focusBorder: #4da6c8;
+			--vscode-foreground: #d9dcdf;
+			--vscode-descriptionForeground: #969ba1;
+			--vscode-button-background: #287da0;
+			--vscode-button-foreground: #f5f7f8;
+			--vscode-errorForeground: #e27777;
+			--vscode-editorWarning-foreground: #d6a64a;
+			--vscode-testing-iconPassed: #72b58b;
+			--vscode-toolbar-hoverBackground: #2a2d31;
+			--vscode-toolbar-activeBackground: #31353a;
+			--vscode-font-family: system-ui, sans-serif;
+			--vscode-editor-font-family: ui-monospace, monospace;
+		}
+
+		html,
+		body {
+			height: auto;
+			overflow: auto;
+		}
+
+		body {
+			max-width: 720px;
+			margin: 0 auto;
+			padding: 32px;
+		}
+
+		h1 {
+			font-size: 18px;
+		}
+
+		.preview-row {
+			display: grid;
+			grid-template-columns: 110px minmax(0, 1fr);
+			gap: 12px;
+			align-items: start;
+			margin: 10px 0;
+		}
+
+		.preview-row > span {
+			padding-top: 8px;
+			color: var(--vscode-descriptionForeground);
+		}
+	</style>
+</head>
+<body>
+	<h1>Activity disclosure · 8 states</h1>
+	<div class="preview-row"><span>default</span><details class="process-group"><summary><span class="process-disclosure">›</span><span class="process-title">Activity</span><span class="process-meta">3 steps</span></summary></details></div>
+	<div class="preview-row"><span>hover</span><details class="process-group is-hover"><summary><span class="process-disclosure">›</span><span class="process-title">Activity</span><span class="process-meta">3 steps</span></summary></details></div>
+	<div class="preview-row"><span>focus-visible</span><details class="process-group is-focus"><summary><span class="process-disclosure">›</span><span class="process-title">Activity</span><span class="process-meta">3 steps</span></summary></details></div>
+	<div class="preview-row"><span>active</span><details class="process-group is-active"><summary><span class="process-disclosure">›</span><span class="process-title">Activity</span><span class="process-meta">3 steps</span></summary></details></div>
+	<div class="preview-row"><span>disabled</span><details class="process-group" aria-disabled="true"><summary><span class="process-disclosure">›</span><span class="process-title">Activity</span><span class="process-meta">Unavailable</span></summary></details></div>
+	<div class="preview-row"><span>loading</span><details class="process-group running"><summary><span class="process-disclosure">›</span><span class="process-title">Activity</span><span class="process-meta">2 steps · Running</span></summary></details></div>
+	<div class="preview-row"><span>error</span><details class="process-group has-errors" open><summary><span class="process-disclosure">›</span><span class="process-title">Activity</span><span class="process-meta">3 steps · Needs attention</span></summary><div class="process-list"><details class="tool-step error"><summary><span class="tool-name">read · README.md</span><span class="tool-state">Error · 0.03s</span></summary></details></div></details></div>
+	<div class="preview-row"><span>success</span><details class="process-group completed"><summary><span class="process-disclosure">›</span><span class="process-title">Activity</span><span class="process-meta">4 steps · Complete</span></summary></details></div>
+</body>
+</html>

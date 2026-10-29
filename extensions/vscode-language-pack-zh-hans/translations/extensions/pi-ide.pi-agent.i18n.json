@@ -1,0 +1,56 @@
+{
+	"": [
+		"Agent coding Simplified Chinese translations for the built-in Agent extension."
+	],
+	"version": "1.0.0",
+	"contents": {
+		"bundle": {
+			"Add an API key before starting this model.": "使用此模型前，请先添加 API Key。",
+			"Activity": "执行过程",
+			"API Key": "API Key",
+			"Approval Required": "需要确认",
+			"Approve and Continue": "确认并继续",
+			"Complete": "已完成",
+			"Error": "错误",
+			"Explain this repository": "介绍这个代码仓库",
+			"Find the most important unfinished work": "查找最重要的未完成工作",
+			"Input": "输入",
+			"Model": "模型",
+			"Needs attention": "需要处理",
+			"New Session": "新建会话",
+			"No Folder Open": "未打开文件夹",
+			"Output": "输出",
+			"Agent coding can inspect the project, edit files, and run commands. You stay in control of every change.": "Agent coding 可以查看项目、编辑文件并运行命令；每一项更改都由你掌控。",
+			"Plan, build, or ask about this project": "规划、开发，或询问这个项目",
+			"Provider": "模型服务商",
+			"Ready": "就绪",
+			"Reject": "拒绝",
+			"Review the current file": "检查当前文件",
+			"Running": "正在执行",
+			"Send": "发送",
+			"Set {0} API Key": "设置 {0} API Key",
+			"step": "步",
+			"steps": "步",
+			"Stop": "停止",
+			"Stopped": "已停止",
+			"The key is stored in the editor secret store and is never written to settings.": "密钥仅保存在编辑器的安全存储中，不会写入设置文件。",
+			"What do you want to build?": "你想开发什么？"
+		},
+		"package": {
+			"command.category": "Agent",
+			"command.focus": "打开智能体",
+			"command.newSession": "新建会话",
+			"command.setApiKey": "设置模型 API Key",
+			"command.stop": "停止当前任务",
+			"configuration.baseUrl.description": "OpenAI 兼容接口的可选地址。",
+			"configuration.model.description": "Agent coding 当前使用的模型 ID。",
+			"configuration.provider.description": "Agent coding 当前使用的模型服务商。",
+			"configuration.requireApproval.description": "运行命令或修改文件前需要你的确认。",
+			"configuration.title": "Agent",
+			"description": "Agent coding 内置的多模型编程智能体。",
+			"displayName": "Agent 工作台",
+			"view.name": "工作台",
+			"viewContainer.title": "Agent"
+		}
+	}
+}
