@@ -261,7 +261,7 @@ interface IPendingRequest extends IDisposable {
 }
 
 export class TimelinePane extends ViewPane {
-	static readonly TITLE: ILocalizedString = localize2('timeline', "Timeline");
+	static readonly TITLE: ILocalizedString = localize2('timeline', "时间线");
 
 	private $container!: HTMLElement;
 	private $message!: HTMLDivElement;

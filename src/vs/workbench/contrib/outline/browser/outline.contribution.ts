@@ -25,7 +25,7 @@ const outlineViewIcon = registerIcon('outline-view-icon', Codicon.symbolClass, l
 
 Registry.as<IViewsRegistry>(ViewExtensions.ViewsRegistry).registerViews([{
 	id: IOutlinePane.Id,
-	name: localize2('name', "Outline"),
+	name: localize2('name', "大纲"),
 	containerIcon: outlineViewIcon,
 	ctorDescriptor: new SyncDescriptor(OutlinePane),
 	canToggleVisibility: true,
@@ -42,7 +42,7 @@ Registry.as<IViewsRegistry>(ViewExtensions.ViewsRegistry).registerViews([{
 Registry.as<IConfigurationRegistry>(ConfigurationExtensions.Configuration).registerConfiguration({
 	'id': 'outline',
 	'order': 117,
-	'title': localize('outlineConfigurationTitle', "Outline"),
+	'title': localize('outlineConfigurationTitle', "大纲"),
 	'type': 'object',
 	'properties': {
 		[OutlineConfigKeys.icons]: {

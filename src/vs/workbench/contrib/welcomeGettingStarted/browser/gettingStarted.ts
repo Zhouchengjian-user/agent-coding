@@ -920,7 +920,7 @@ export class GettingStartedPage extends EditorPane {
 			...defaultToggleStyles
 		});
 		showOnStartupCheckbox.domNode.id = 'showOnStartup';
-		const showOnStartupLabel = $('label.caption', { for: 'showOnStartup' }, localize('welcomePage.showOnStartup', "Show welcome page on startup"));
+		const showOnStartupLabel = $('label.caption', { for: 'showOnStartup' }, localize('welcomePage.showOnStartup', "启动时显示欢迎页"));
 		const onShowOnStartupChanged = () => {
 			if (showOnStartupCheckbox.checked) {
 				this.telemetryService.publicLog2<GettingStartedActionEvent, GettingStartedActionClassification>('gettingStarted.ActionExecuted', { command: 'showOnStartupChecked', argument: undefined, walkthroughId: this.currentWalkthrough?.id });
@@ -1133,7 +1133,7 @@ export class GettingStartedPage extends EditorPane {
 
 		const recentlyOpenedList = this.recentlyOpenedList.value = new GettingStartedIndexList(
 			{
-				title: localize('recent', "Recent"),
+				title: localize('recent', "最近"),
 				klass: 'recently-opened',
 				limit: 5,
 				empty: $('.empty-recent', {},
@@ -1196,7 +1196,7 @@ export class GettingStartedPage extends EditorPane {
 
 		const startList = this.startList.value = new GettingStartedIndexList(
 			{
-				title: localize('start', "Start"),
+				title: localize('start', "启动"),
 				klass: 'start-container',
 				limit: 10,
 				renderElement: renderStartEntry,
@@ -1272,7 +1272,7 @@ export class GettingStartedPage extends EditorPane {
 
 		const gettingStartedList = this.gettingStartedList.value = new GettingStartedIndexList(
 			{
-				title: localize('walkthroughs', "Walkthroughs"),
+				title: localize('walkthroughs', "入门指南"),
 				klass: 'getting-started',
 				limit: 5,
 				footer: $('span.button-link.see-all-walkthroughs', { 'x-dispatch': 'seeAllWalkthroughs', 'tabindex': 0 }, localize('showAll', "More...")),

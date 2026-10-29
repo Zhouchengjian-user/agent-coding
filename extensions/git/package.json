@@ -4377,13 +4377,13 @@
       },
       {
         "view": "explorer",
-        "contents": "%view.workbench.cloneRepository%",
+        "contents": "可以在本地克隆代码仓库。\n[克隆仓库](command:git.clone 'Git 扩展激活后克隆代码仓库')",
         "when": "config.git.enabled && git.state == initialized && scm.providerCount == 0",
         "group": "5_scm@1"
       },
       {
         "view": "explorer",
-        "contents": "%view.workbench.learnMore%",
+        "contents": "了解如何使用 Git 和源代码管理，请[查看文档](https://aka.ms/vscode-scm)。",
         "when": "config.git.enabled && git.state == initialized && scm.providerCount == 0",
         "group": "5_scm@10"
       }

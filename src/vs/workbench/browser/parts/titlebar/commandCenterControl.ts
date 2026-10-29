@@ -222,7 +222,7 @@ class CommandCenterCenterViewItem extends BaseActionViewItem {
 								label = that._windowTitle.fileName ?? label;
 							}
 							if (!label) {
-								label = localize('label.dfl', "Search");
+								label = localize('label.dfl', "搜索文件、代码、功能...");
 							}
 							if (prefix) {
 								label = localize('label1', "{0} {1}", prefix, label);

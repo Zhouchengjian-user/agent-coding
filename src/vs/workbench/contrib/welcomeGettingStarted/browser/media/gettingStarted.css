@@ -1,3 +1,4 @@
+/* finesse · register=product · shell=welcome-canvas+quick-actions · A=warm-stone+amber-teal · B=system-760/520 · C=two-column-card-deck · D=feedback-only · E=layered-horizon · SOUL=7 SPECTACLE=2 DENSITY=6 */
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -1263,4 +1264,216 @@
 
 .monaco-workbench .part.editor > .content .gettingStartedContainer .gettingStartedSlide .getting-started-checkbox {
 	border-color: var(--vscode-checkbox-border) !important;
+}
+
+/* Agent coding warm welcome surface */
+.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer {
+	--agent-welcome-card: rgba(43, 42, 39, 0.94);
+	--agent-welcome-card-hover: rgba(56, 53, 48, 0.98);
+	--agent-welcome-border: rgba(255, 248, 237, 0.1);
+	--agent-welcome-accent: #D9AA61;
+	--agent-welcome-partner: #69C7B7;
+	--agent-welcome-ink: #F1ECE3;
+	--agent-welcome-muted: #A49D91;
+	background: #1A1C1D;
+}
+
+.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories {
+	position: relative;
+	isolation: isolate;
+	padding: 24px 32px;
+	background:
+		linear-gradient(180deg, rgba(26, 28, 29, 0.28) 0%, rgba(26, 28, 29, 0.52) 46%, rgba(26, 28, 29, 0.78) 100%),
+		url('./agent-coding-horizon.svg') center bottom / cover no-repeat;
+}
+
+.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	background: radial-gradient(circle at 74% 54%, rgba(217, 170, 97, 0.13), transparent 28%);
+	pointer-events: none;
+}
+
+.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories > .gettingStartedCategoriesContainer {
+	max-width: 980px;
+	grid-template-rows: minmax(132px, 22%) minmax(0, auto) min-content;
+	grid-template-columns: minmax(0, 1fr) 18px minmax(0, 1fr);
+	grid-template-areas:
+		"header header header"
+		"left-column . right-column"
+		"footer footer footer";
+	align-content: center;
+}
+
+.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories > .gettingStartedCategoriesContainer > .header {
+	align-self: center;
+	padding: 8px 4px 20px;
+}
+
+.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories > .gettingStartedCategoriesContainer > .header h1 {
+	padding: 0;
+	color: var(--agent-welcome-ink);
+	font-size: 42px;
+	font-weight: 760;
+	letter-spacing: -0.035em;
+	line-height: 1.02;
+	text-wrap: balance;
+}
+
+.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories > .gettingStartedCategoriesContainer > .header .subtitle {
+	margin-top: 10px;
+	color: var(--agent-welcome-muted);
+	font-size: 17px;
+	font-weight: 520;
+	letter-spacing: -0.01em;
+}
+
+.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories > .gettingStartedCategoriesContainer > .categories-column {
+	min-width: 0;
+	padding: 18px;
+	border: 1px solid var(--agent-welcome-border);
+	border-radius: 18px;
+	background: rgba(31, 32, 31, 0.82);
+	box-shadow: 0 24px 60px -44px rgba(12, 10, 7, 0.88);
+}
+
+.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories > .gettingStartedCategoriesContainer > .categories-column > div {
+	margin-bottom: 22px;
+}
+
+.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories > .gettingStartedCategoriesContainer > .categories-column > div:last-child {
+	margin-bottom: 0;
+}
+
+.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories h2 {
+	margin-bottom: 12px;
+	color: var(--agent-welcome-ink);
+	font-size: 15px;
+	font-weight: 650;
+	letter-spacing: -0.01em;
+}
+
+.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .index-list.start-container {
+	min-height: 0;
+	margin-bottom: 20px;
+}
+
+.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .start-container ul {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 10px;
+	line-height: 1.3;
+}
+
+.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .start-container li {
+	min-width: 0;
+}
+
+.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .start-container .button-link {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	width: 100%;
+	min-height: 62px;
+	padding: 12px 14px;
+	border: 1px solid var(--agent-welcome-border);
+	border-radius: 14px;
+	background: var(--agent-welcome-card);
+	color: var(--agent-welcome-ink);
+	font-size: 13px;
+	font-weight: 560;
+	line-height: 1.3;
+	transition: background-color 120ms ease, border-color 120ms ease, transform 120ms ease;
+}
+
+.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .start-container li:first-child .button-link {
+	border-color: rgba(217, 170, 97, 0.3);
+	background: rgba(99, 73, 39, 0.48);
+}
+
+.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .start-container .button-link:hover {
+	border-color: rgba(217, 170, 97, 0.28);
+	background: var(--agent-welcome-card-hover);
+	transform: translateY(-1px);
+}
+
+.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .start-container .icon-widget {
+	color: var(--agent-welcome-accent);
+	font-size: 22px;
+}
+
+.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .getting-started-category {
+	width: 100%;
+	min-height: 58px;
+	margin: 0 0 10px;
+	padding: 12px 14px;
+	border: 1px solid var(--agent-welcome-border);
+	border-radius: 14px;
+	background: var(--agent-welcome-card);
+	box-shadow: 0 1px 3px rgba(18, 14, 9, 0.18);
+	transition: background-color 120ms ease, border-color 120ms ease, transform 120ms ease;
+}
+
+.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .getting-started-category:hover {
+	border-color: rgba(105, 199, 183, 0.26);
+	background: var(--agent-welcome-card-hover);
+	transform: translateY(-1px);
+}
+
+.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .getting-started-category .featured-icon,
+.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .getting-started-category .icon-widget {
+	color: var(--agent-welcome-partner);
+}
+
+.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .category-title {
+	color: var(--agent-welcome-ink);
+	font-size: 13px;
+	font-weight: 620;
+}
+
+.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .description-content {
+	color: var(--agent-welcome-muted);
+	font-size: 12px;
+	line-height: 1.45;
+}
+
+.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .recently-opened li {
+	min-height: 30px;
+	padding: 3px 8px 3px 4px;
+	border-radius: 8px;
+}
+
+.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .recently-opened li:hover {
+	background: rgba(255, 248, 237, 0.05);
+}
+
+.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .footer {
+	width: 100%;
+	padding-top: 14px;
+	color: var(--agent-welcome-muted);
+}
+
+.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .footer .agents-banner {
+	display: none;
+}
+
+.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .showOnStartup {
+	justify-content: flex-start;
+	margin: 0;
+}
+
+.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer.width-semi-constrained .gettingStartedSlideCategories > .gettingStartedCategoriesContainer,
+.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer.height-constrained .gettingStartedSlideCategories > .gettingStartedCategoriesContainer {
+	grid-template-rows: auto auto auto;
+	align-content: start;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .button-link,
+	.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .getting-started-category {
+		transform: none !important;
+		transition-duration: 0.01ms !important;
+	}
 }

@@ -53,15 +53,22 @@ export interface IResolveNLSConfigurationContext {
 
 export async function resolveNLSConfiguration({ userLocale, osLocale, userDataPath, commit, nlsMetadataPath, nlsMetadataHash, builtInLanguagePackPath }: IResolveNLSConfigurationContext): Promise<INLSConfiguration> {
 	mark('code/willGenerateNls');
+	// Development builds normally skip language-pack resolution because the
+	// generated NLS metadata lives in `out-build`, not `out`. Agent coding ships
+	// a built-in Chinese pack, so use that metadata during local development as
+	// well. This keeps the development app consistent with the packaged product.
+	const effectiveNlsMetadataPath = process.env['VSCODE_DEV'] && builtInLanguagePackPath
+		? join(nlsMetadataPath, '..', 'out-build')
+		: nlsMetadataPath;
 
 	if (
-		process.env['VSCODE_DEV'] ||
+		(process.env['VSCODE_DEV'] && !builtInLanguagePackPath) ||
 		userLocale === 'pseudo' ||
 		userLocale.startsWith('en') ||
-		!commit ||
+		(!commit && !builtInLanguagePackPath) ||
 		!userDataPath
 	) {
-		return defaultNLSConfiguration(userLocale, osLocale, nlsMetadataPath);
+		return defaultNLSConfiguration(userLocale, osLocale, effectiveNlsMetadataPath);
 	}
 
 	try {
@@ -93,7 +100,7 @@ export async function resolveNLSConfiguration({ userLocale, osLocale, userDataPa
 
 		const languagePackId = `${languagePack.hash}.${resolvedLanguage}`;
 		const globalLanguagePackCachePath = join(userDataPath, 'clp', languagePackId);
-		const commitLanguagePackCachePath = join(globalLanguagePackCachePath, nlsMetadataHash ?? commit);
+		const commitLanguagePackCachePath = join(globalLanguagePackCachePath, nlsMetadataHash ?? commit ?? 'development');
 		const languagePackMessagesFile = join(commitLanguagePackCachePath, 'nls.messages.json');
 		const translationsConfigFile = join(globalLanguagePackCachePath, 'tcf.json');
 		const languagePackCorruptMarkerFile = join(globalLanguagePackCachePath, 'corrupted.info');
@@ -106,7 +113,7 @@ export async function resolveNLSConfiguration({ userLocale, osLocale, userDataPa
 			userLocale,
 			osLocale,
 			resolvedLanguage,
-			defaultMessagesFile: join(nlsMetadataPath, 'nls.messages.json'),
+			defaultMessagesFile: join(effectiveNlsMetadataPath, 'nls.messages.json'),
 			languagePack: {
 				translationsConfigFile,
 				messagesFile: languagePackMessagesFile,
@@ -138,8 +145,8 @@ export async function resolveNLSConfiguration({ userLocale, osLocale, userDataPa
 			[Array<[string, string[]]>, string[], { contents: Record<string, Record<string, string>> }]
 			//      ^moduleId ^nlsKeys                               ^moduleId      ^nlsKey ^nlsValue
 			= await Promise.all([
-				promises.readFile(join(nlsMetadataPath, 'nls.keys.json'), 'utf-8').then(content => JSON.parse(content)),
-				promises.readFile(join(nlsMetadataPath, 'nls.messages.json'), 'utf-8').then(content => JSON.parse(content)),
+				promises.readFile(join(effectiveNlsMetadataPath, 'nls.keys.json'), 'utf-8').then(content => JSON.parse(content)),
+				promises.readFile(join(effectiveNlsMetadataPath, 'nls.messages.json'), 'utf-8').then(content => JSON.parse(content)),
 				promises.readFile(mainLanguagePackPath, 'utf-8').then(content => JSON.parse(content)),
 			]);
 
@@ -173,7 +180,7 @@ export async function resolveNLSConfiguration({ userLocale, osLocale, userDataPa
 		console.error('Generating translation files failed.', error);
 	}
 
-	return defaultNLSConfiguration(userLocale, osLocale, nlsMetadataPath);
+	return defaultNLSConfiguration(userLocale, osLocale, effectiveNlsMetadataPath);
 }
 
 /**

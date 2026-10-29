@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+	<defs>
+		<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+			<stop stop-color="#1B1D1E"/>
+			<stop offset=".56" stop-color="#242526"/>
+			<stop offset="1" stop-color="#1B1C1D"/>
+		</linearGradient>
+		<radialGradient id="sun" cx="0" cy="0" r="1" gradientTransform="translate(1160 620) rotate(90) scale(178)">
+			<stop stop-color="#F3C97C" stop-opacity=".92"/>
+			<stop offset=".45" stop-color="#D89A4C" stop-opacity=".44"/>
+			<stop offset="1" stop-color="#D89A4C" stop-opacity="0"/>
+		</radialGradient>
+		<linearGradient id="ridgeA" x1="0" y1="0" x2="1" y2=".8">
+			<stop stop-color="#303233"/>
+			<stop offset="1" stop-color="#1E2021"/>
+		</linearGradient>
+		<linearGradient id="ridgeB" x1="0" y1="0" x2=".7" y2="1">
+			<stop stop-color="#242728"/>
+			<stop offset="1" stop-color="#17191A"/>
+		</linearGradient>
+		<linearGradient id="river" x1=".2" y1="0" x2=".8" y2="1">
+			<stop stop-color="#F0C273" stop-opacity=".84"/>
+			<stop offset=".6" stop-color="#C9893E" stop-opacity=".42"/>
+			<stop offset="1" stop-color="#69C7B7" stop-opacity=".2"/>
+		</linearGradient>
+	</defs>
+	<rect width="1600" height="1000" fill="url(#sky)"/>
+	<ellipse cx="1160" cy="620" rx="178" ry="178" fill="url(#sun)"/>
+	<path d="M0 590c188-89 342-78 492-8 136 64 246 65 382 5 142-62 274-62 424 8 98 46 198 65 302 42v363H0V590Z" fill="url(#ridgeA)" opacity=".94"/>
+	<path d="M0 708c152-84 288-99 418-42 123 53 242 45 360-26 127-76 274-73 440 7 119 58 248 65 382 18v335H0V708Z" fill="url(#ridgeB)"/>
+	<path d="M1600 706c-254 38-418 86-493 145-49 39-90 89-146 149H777c64-63 114-118 164-155 94-70 278-118 659-139Z" fill="url(#river)" opacity=".84"/>
+	<path d="M0 830c193-93 374-105 544-35 134 56 276 54 426-5 187-74 397-67 630 20v190H0V830Z" fill="#17191A" opacity=".78"/>
+</svg>

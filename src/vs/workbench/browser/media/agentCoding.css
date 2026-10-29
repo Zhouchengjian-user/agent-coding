@@ -1,0 +1,147 @@
+/* finesse · register=product · shell=canvas-dominant-ide+agent-rail · A=warm-stone+amber-teal · B=system-700/400 · C=floating-rounded-shell · D=feedback-only · E=soft-graphite · SOUL=7 SPECTACLE=2 DENSITY=8 */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.monaco-workbench.vs-dark {
+	--agent-shell-page: #171817;
+	--agent-shell-panel: #232321;
+	--agent-shell-raised: #2B2A27;
+	--agent-shell-inset: #20211F;
+	--agent-shell-border: rgba(255, 248, 237, 0.08);
+	--agent-shell-border-strong: rgba(231, 186, 115, 0.32);
+	--agent-shell-accent: #D9AA61;
+	--agent-shell-accent-soft: rgba(217, 170, 97, 0.14);
+	--agent-shell-partner: #69C7B7;
+	--agent-shell-ink: #F1ECE3;
+	--agent-shell-muted: #9C968C;
+	--agent-shell-shadow: 0 18px 48px -32px rgba(18, 14, 9, 0.78);
+	--agent-shell-radius: 14px;
+	--agent-shell-control-radius: 10px;
+}
+
+.monaco-workbench.vs-dark .part.titlebar {
+	box-shadow: 0 1px 0 var(--agent-shell-border);
+}
+
+.monaco-workbench.vs-dark.mac .part.titlebar::after {
+	content: 'Agent coding';
+	position: absolute;
+	top: 0;
+	left: 78px;
+	z-index: 4;
+	display: flex;
+	align-items: center;
+	height: 100%;
+	padding-left: 28px;
+	background: url('./agent-coding-mark.svg') left center / 20px 20px no-repeat;
+	color: var(--agent-shell-ink);
+	font-size: 13px;
+	font-weight: 650;
+	letter-spacing: -0.01em;
+	pointer-events: none;
+}
+
+.monaco-workbench.vs-dark .part.titlebar .command-center .monaco-inputbox,
+.monaco-workbench.vs-dark .part.titlebar .command-center .monaco-action-bar {
+	border-radius: 12px;
+}
+
+.monaco-workbench.vs-dark .part.activitybar,
+.monaco-workbench.vs-dark .part.sidebar,
+.monaco-workbench.vs-dark .part.auxiliarybar,
+.monaco-workbench.vs-dark .part.panel {
+	box-shadow: inset 0 0 0 1px var(--agent-shell-border);
+}
+
+.monaco-workbench.vs-dark .part.sidebar,
+.monaco-workbench.vs-dark .part.auxiliarybar {
+	border-radius: var(--agent-shell-radius);
+	box-shadow: inset 0 0 0 1px var(--agent-shell-border), var(--agent-shell-shadow);
+}
+
+.monaco-workbench.vs-dark .part.sidebar > .title,
+.monaco-workbench.vs-dark .part.auxiliarybar > .title {
+	min-height: 44px;
+	padding: 4px 12px;
+}
+
+.monaco-workbench.vs-dark .part.sidebar > .title > .title-label h2,
+.monaco-workbench.vs-dark .part.auxiliarybar > .title > .title-label h2 {
+	color: var(--agent-shell-ink);
+	font-size: 13px;
+	font-weight: 650;
+	letter-spacing: -0.01em;
+	text-transform: none;
+}
+
+.monaco-workbench.vs-dark .part.activitybar .action-item > .action-label,
+.monaco-workbench.vs-dark .part.activitybar .activity-action-item > .action-label {
+	margin: 4px 6px;
+	border-radius: 12px;
+	transition: background-color 120ms ease, color 120ms ease;
+}
+
+.monaco-workbench.vs-dark .part.activitybar .action-item.checked > .action-label,
+.monaco-workbench.vs-dark .part.activitybar .activity-action-item.checked > .action-label {
+	background: var(--agent-shell-accent-soft);
+	color: var(--agent-shell-accent);
+}
+
+.monaco-workbench.vs-dark .monaco-list-row {
+	border-radius: 8px;
+}
+
+.monaco-workbench.vs-dark .monaco-list-row.selected,
+.monaco-workbench.vs-dark .monaco-list-row.focused {
+	box-shadow: inset 2px 0 0 var(--agent-shell-accent);
+}
+
+.monaco-workbench.vs-dark .part.editor > .content .editor-group-container {
+	background: var(--agent-shell-inset);
+}
+
+.monaco-workbench.vs-dark .part.editor .tabs-container > .tab {
+	margin: 5px 2px 4px;
+	border: 1px solid transparent;
+	border-radius: 10px;
+}
+
+.monaco-workbench.vs-dark .part.editor .tabs-container > .tab.active {
+	border-color: var(--agent-shell-border);
+	box-shadow: 0 1px 3px rgba(18, 14, 9, 0.24);
+}
+
+.monaco-workbench.vs-dark .monaco-button,
+.monaco-workbench.vs-dark .monaco-text-button,
+.monaco-workbench.vs-dark .monaco-inputbox,
+.monaco-workbench.vs-dark .monaco-select-box {
+	border-radius: var(--agent-shell-control-radius);
+}
+
+.monaco-workbench.vs-dark .monaco-inputbox.synthetic-focus,
+.monaco-workbench.vs-dark .monaco-inputbox:focus-within {
+	box-shadow: 0 0 0 3px var(--agent-shell-accent-soft);
+}
+
+.monaco-workbench.vs-dark .part.statusbar {
+	box-shadow: 0 -1px 0 var(--agent-shell-border);
+}
+
+.monaco-workbench.vs-dark .part.statusbar .statusbar-item > .statusbar-item-label {
+	border-radius: 7px;
+}
+
+.monaco-workbench.vs-dark .sash.vertical::before,
+.monaco-workbench.vs-dark .sash.horizontal::before {
+	background: var(--agent-shell-accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.monaco-workbench.vs-dark *,
+	.monaco-workbench.vs-dark *::before,
+	.monaco-workbench.vs-dark *::after {
+		transition-duration: 0.01ms !important;
+	}
+}

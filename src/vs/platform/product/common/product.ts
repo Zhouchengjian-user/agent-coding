@@ -42,9 +42,10 @@ else if (globalThis._VSCODE_PRODUCT_JSON && globalThis._VSCODE_PACKAGE_JSON) {
 
 	// Running out of sources
 	if (env['VSCODE_DEV']) {
+		const isAgentCoding = product.applicationName === 'agent-coding';
 		Object.assign(product, {
-			nameShort: `${product.nameShort} Dev`,
-			nameLong: `${product.nameLong} Dev`,
+			nameShort: isAgentCoding ? product.nameShort : `${product.nameShort} Dev`,
+			nameLong: isAgentCoding ? product.nameLong : `${product.nameLong} Dev`,
 			dataFolderName: `${product.dataFolderName}-dev`,
 			serverDataFolderName: product.serverDataFolderName ? `${product.serverDataFolderName}-dev` : undefined
 		});

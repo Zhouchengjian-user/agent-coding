@@ -14,6 +14,12 @@
   "contributes": {
     "themes": [
       {
+        "id": "Agent Coding Warm",
+        "label": "%agentCodingWarmThemeLabel%",
+        "uiTheme": "vs-dark",
+        "path": "./themes/agent_coding_warm.json"
+      },
+      {
         "id": "Light 2026",
         "label": "%light2026ThemeLabel%",
         "uiTheme": "vs",

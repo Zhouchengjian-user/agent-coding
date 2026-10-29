@@ -114,7 +114,7 @@ type GettingStartedStartEntryContent = BuiltinGettingStartedStartEntry[];
 export const startEntries: GettingStartedStartEntryContent = [
 	{
 		id: 'welcome.showNewFileEntries',
-		title: localize('gettingStarted.newFile.title', "New File..."),
+		title: localize('gettingStarted.newFile.title', "新建文件..."),
 		description: localize('gettingStarted.newFile.description', "Open a new untitled text file, notebook, or custom editor."),
 		icon: Codicon.newFile,
 		content: {
@@ -124,7 +124,7 @@ export const startEntries: GettingStartedStartEntryContent = [
 	},
 	{
 		id: 'topLevelOpenMac',
-		title: localize('gettingStarted.openMac.title', "Open..."),
+		title: localize('gettingStarted.openMac.title', "打开..."),
 		description: localize('gettingStarted.openMac.description', "Open a file or folder to start working"),
 		icon: Codicon.folderOpened,
 		when: '!isWeb && isMac',
@@ -168,7 +168,7 @@ export const startEntries: GettingStartedStartEntryContent = [
 	},
 	{
 		id: 'topLevelGitClone',
-		title: localize('gettingStarted.topLevelGitClone.title', "Clone Git Repository..."),
+		title: localize('gettingStarted.topLevelGitClone.title', "克隆 Git 仓库..."),
 		description: localize('gettingStarted.topLevelGitClone.description', "Clone a remote repository to a local folder"),
 		when: 'config.git.enabled && !git.missing',
 		icon: Codicon.sourceControl,
@@ -190,7 +190,7 @@ export const startEntries: GettingStartedStartEntryContent = [
 	},
 	{
 		id: 'topLevelRemoteOpen',
-		title: localize('gettingStarted.topLevelRemoteOpen.title', "Connect to..."),
+		title: localize('gettingStarted.topLevelRemoteOpen.title', "连接到..."),
 		description: localize('gettingStarted.topLevelRemoteOpen.description', "Connect to remote development workspaces."),
 		when: '!isWeb',
 		icon: Codicon.remote,
@@ -241,8 +241,8 @@ function createCopilotSetupStep(id: string, button: string, when: string, includ
 export const walkthroughs: GettingStartedWalkthroughContent = [
 	{
 		id: 'Setup',
-		title: localize('gettingStarted.setup.title', "Get started with Agent coding"),
-		description: localize('gettingStarted.setup.description', "Customize your editor, learn the basics, and start coding"),
+		title: localize('gettingStarted.setup.title', "开始使用 Agent coding"),
+		description: localize('gettingStarted.setup.description', "自定义编辑器、了解基础知识并开始编码"),
 		isFeatured: true,
 		icon: setupIcon,
 		when: '!isWeb',
@@ -278,7 +278,7 @@ export const walkthroughs: GettingStartedWalkthroughContent = [
 	{
 		id: 'SetupWeb',
 		title: localize('gettingStarted.setupWeb.title', "Get Started with Agent coding for the Web"),
-		description: localize('gettingStarted.setupWeb.description', "Customize your editor, learn the basics, and start coding"),
+		description: localize('gettingStarted.setupWeb.description', "自定义编辑器、了解基础知识并开始编码"),
 		isFeatured: true,
 		icon: setupIcon,
 		when: 'isWeb',
@@ -470,7 +470,7 @@ export const walkthroughs: GettingStartedWalkthroughContent = [
 	{
 		id: 'Beginner',
 		isFeatured: false,
-		title: localize('gettingStarted.beginner.title', "Learn the Fundamentals"),
+		title: localize('gettingStarted.beginner.title', "了解基础知识"),
 		icon: beginnerIcon,
 		description: localize('gettingStarted.beginner.description', "Get an overview of the most essential features"),
 		walkthroughPageTitle: localize('gettingStarted.beginner.walkthroughPageTitle', 'Essential Features'),

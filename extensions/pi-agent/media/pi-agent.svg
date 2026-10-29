@@ -1,4 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-	<path d="M12 3.1c1 0 1.9.5 2.4 1.4l6.2 10.7a2.8 2.8 0 0 1-2.4 4.2H5.8a2.8 2.8 0 0 1-2.4-4.2L9.6 4.5A2.8 2.8 0 0 1 12 3.1Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-	<path d="M8.4 15.2 12 9l3.6 6.2M10.1 12.4h3.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+	<defs>
+		<linearGradient id="gold" x1="4" y1="3" x2="15" y2="20" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#F1CA84"/>
+			<stop offset="1" stop-color="#C78835"/>
+		</linearGradient>
+		<linearGradient id="mint" x1="20" y1="5" x2="11" y2="20" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#8FE0D0"/>
+			<stop offset="1" stop-color="#367A70"/>
+		</linearGradient>
+	</defs>
+	<path d="M12 2.7c1.1 0 2 .6 2.6 1.5l6.4 11a3 3 0 0 1-2.6 4.5H5.6A3 3 0 0 1 3 15.2l6.4-11A3 3 0 0 1 12 2.7Z" fill="url(#gold)"/>
+	<path d="m12 7.2 7.3 12.5H12l3.7-6.3L12 7.2Z" fill="url(#mint)"/>
+	<path d="m12 8.4-4.1 7.1h8.2L12 8.4Zm0 3.2 1.3 2.3h-2.6l1.3-2.3Z" fill="#20211F" fill-opacity=".9"/>
 </svg>
