@@ -6,7 +6,7 @@
 'use strict';
 
 const vscode = require('vscode');
-const { PiAgentViewProvider } = require('./webviewProvider.cjs');
+const { PiAgentViewProvider, createAgentProduct } = require('./webviewProvider.cjs');
 
 function activate(context) {
 	const provider = new PiAgentViewProvider(context);
@@ -20,6 +20,7 @@ function activate(context) {
 		}),
 		vscode.commands.registerCommand('piAgent.newSession', () => provider.runtime.newSession()),
 		vscode.commands.registerCommand('piAgent.stop', () => provider.runtime.abort()),
+		vscode.commands.registerCommand('piAgent.createProduct', () => createAgentProduct()),
 		{ dispose: () => void provider.dispose() }
 	);
 

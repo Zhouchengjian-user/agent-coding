@@ -5,18 +5,26 @@
 	"version": "1.0.0",
 	"contents": {
 		"bundle": {
+			"A folder named \"{0}\" already exists. Choose another project name.": "名为“{0}”的文件夹已经存在，请换一个项目名称。",
 			"Add an API key before starting this model.": "使用此模型前，请先添加 API Key。",
 			"Activity": "执行过程",
 			"API Key": "API Key",
 			"Approval Required": "需要确认",
 			"Approve and Continue": "确认并继续",
 			"Complete": "已完成",
+			"Create an Agent product": "创建 Agent 产品",
+			"Create here": "在这里创建",
+			"Creating {0}": "正在创建 {0}",
+			"Choose where to create the project": "选择项目保存位置",
+			"Enter a project name.": "请输入项目名称。",
 			"Error": "错误",
 			"Explain this repository": "介绍这个代码仓库",
 			"Find the most important unfinished work": "查找最重要的未完成工作",
+			"For example: Customer service assistant": "例如：智能客服助手",
 			"Input": "输入",
 			"Model": "模型",
 			"Needs attention": "需要处理",
+			"Name your new Agent product.": "给新的 Agent 产品起个名字。",
 			"New Session": "新建会话",
 			"No Folder Open": "未打开文件夹",
 			"Output": "输出",
@@ -34,10 +42,12 @@
 			"Stop": "停止",
 			"Stopped": "已停止",
 			"The key is stored in the editor secret store and is never written to settings.": "密钥仅保存在编辑器的安全存储中，不会写入设置文件。",
+			"The project name contains characters that cannot be used in a folder name.": "项目名称包含不能用于文件夹名称的字符。",
 			"What do you want to build?": "你想开发什么？"
 		},
 		"package": {
 			"command.category": "Agent",
+			"command.createProduct": "创建 Agent 产品",
 			"command.focus": "打开智能体",
 			"command.newSession": "新建会话",
 			"command.setApiKey": "设置模型 API Key",
@@ -49,8 +59,8 @@
 			"configuration.title": "Agent",
 			"description": "Agent coding 内置的多模型编程智能体。",
 			"displayName": "Agent 工作台",
-			"view.name": "工作台",
-			"viewContainer.title": "Agent"
+			"view.name": "智能助理",
+			"viewContainer.title": "智能助理"
 		}
 	}
 }

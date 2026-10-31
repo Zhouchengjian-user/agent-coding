@@ -8,6 +8,7 @@ This built-in extension provides the multi-model Agent workspace in the secondar
 - `Agent: Set Provider API Key`
 - `Agent: New Session`
 - `Agent: Stop Current Run`
+- `Agent: Create Agent Product`
 
 ## Settings
 

@@ -20,7 +20,8 @@
 		"onStartupFinished",
 		"onView:piAgent.chat",
 		"onCommand:piAgent.focus",
-		"onCommand:piAgent.setApiKey"
+		"onCommand:piAgent.setApiKey",
+		"onCommand:piAgent.createProduct"
 	],
 	"contributes": {
 		"viewsContainers": {
@@ -65,6 +66,12 @@
 				"title": "%command.stop%",
 				"category": "%command.category%",
 				"icon": "$(debug-stop)"
+			},
+			{
+				"command": "piAgent.createProduct",
+				"title": "%command.createProduct%",
+				"category": "%command.category%",
+				"icon": "$(new-folder)"
 			}
 		],
 		"menus": {
@@ -124,6 +131,7 @@
 		},
 		"configurationDefaults": {
 			"chat.disableAIFeatures": true,
+			"workbench.colorTheme": "Default Light Modern",
 			"workbench.welcomePage.experimentalOnboarding": false,
 			"workbench.secondarySideBar.defaultVisibility": "visibleInWorkspace"
 		}

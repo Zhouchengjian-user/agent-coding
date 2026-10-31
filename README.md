@@ -4,7 +4,7 @@
 
 Agent coding 是一个面向企业与开发团队的桌面 AI 编程平台。产品以成熟的代码编辑器为主画布，在右侧集成常驻的多模型 Agent 工作台，让模型能够理解项目、编辑文件、运行命令，并在关键写操作前请求用户确认。
 
-![Agent coding 中文主页](docs/images/agent-coding-homepage.png)
+![Agent coding 中文主页](docs/images/agent-coding-homepage.jpg)
 
 ## 当前能力
 

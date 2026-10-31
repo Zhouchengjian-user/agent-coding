@@ -3,6 +3,8 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
+/* finesse · register=product · shell=welcome-canvas+quick-actions · palette=graphite-on-warm-paper · SOUL=5 SPECTACLE=1 DENSITY=7 */
+
 import { $, Dimension, addDisposableListener, append, clearNode, reset } from '../../../../base/browser/dom.js';
 import { renderFormattedText } from '../../../../base/browser/formattedTextRenderer.js';
 import { status } from '../../../../base/browser/ui/aria/aria.js';
@@ -939,6 +941,11 @@ export class GettingStartedPage extends EditorPane {
 			onShowOnStartupChanged();
 		}));
 
+		if (this.productService.nameShort === 'Agent coding') {
+			this.buildAgentCodingHome(showOnStartupCheckbox.domNode, showOnStartupLabel);
+			return;
+		}
+
 		const header = $('.header', {},
 			$('h1.product-name.caption', {}, this.productService.nameLong),
 			$('p.subtitle.description', {}, this.productService.welcomePageSubtitle ?? localize({ key: 'gettingStarted.editingEvolved', comment: ['Shown as subtitle on the Welcome page.'] }, "Editing evolved"))
@@ -1067,6 +1074,70 @@ export class GettingStartedPage extends EditorPane {
 		this.setSlide('categories');
 	}
 
+	private buildAgentCodingHome(showOnStartupCheckbox: HTMLElement, showOnStartupLabel: HTMLElement): void {
+		const header = $('.agent-home-header', {},
+			$('h1', {}, 'Agent ', $('span.agent-home-title-accent', {}, 'coding')),
+			$('p.subtitle', {}, 'AI coding platform')
+		);
+
+		const actions = $('.agent-home-actions', {},
+			this.createAgentHomeAction(
+				Codicon.newFile,
+				localize('agentHome.create', "开始创建"),
+				localize('agentHome.createDescription', "使用 AI 助手快速创建新项目"),
+				'piAgent.createProduct',
+				'agent-home-action-create'
+			),
+			this.createAgentHomeAction(
+				Codicon.folderOpened,
+				localize('agentHome.open', "打开项目"),
+				localize('agentHome.openDescription', "导入本地项目继续开发"),
+				'workbench.action.files.openFolder',
+				'agent-home-action-open'
+			),
+			this.createAgentHomeAction(
+				Codicon.book,
+				localize('agentHome.learn', "了解基础知识"),
+				localize('agentHome.learnDescription', "学习 Agent coding 的使用方法"),
+				'workbench.action.openWalkthrough',
+				'agent-home-action-learn'
+			)
+		);
+		// Keep the product's chosen three-card desktop composition independent of
+		// the generic welcome page's width classifications.
+		actions.style.setProperty('display', 'grid', 'important');
+		actions.style.setProperty('grid-template-columns', 'repeat(3, minmax(0, 1fr))', 'important');
+		actions.style.setProperty('gap', '24px', 'important');
+
+		const recentList = this.buildRecentlyOpenedList();
+		recentList.setLimit(4);
+		const main = $('.agent-home-main', {}, actions, recentList.getDomElement());
+		const footer = $('.agent-home-footer', {},
+			$('p.showOnStartup', {}, showOnStartupCheckbox, showOnStartupLabel)
+		);
+		const categoriesContainer = $('.gettingStartedCategoriesContainer.agent-coding-home', {}, header, main, footer);
+
+		reset(this.categoriesSlide, categoriesContainer);
+		this.categoriesPageScrollbar?.scanDomNode();
+		this.layoutAgentsWindowGraphic = undefined;
+		this.updateCategoryProgress();
+		this.registerDispatchListeners();
+		this.setSlide('categories');
+	}
+
+	private createAgentHomeAction(icon: ThemeIcon, title: string, description: string, command: string, modifier: string): HTMLElement {
+		const button = $(`button.agent-home-action.${modifier}`, { type: 'button' },
+			$('span.agent-home-action-icon', {}, $(ThemeIcon.asCSSSelector(icon))),
+			$('span.agent-home-action-title', {}, title),
+			$('span.agent-home-action-description', {}, description),
+			$('span.agent-home-action-arrow', {}, $(ThemeIcon.asCSSSelector(Codicon.arrowRight)))
+		);
+		this.categoriesSlideDisposables.add(addDisposableListener(button, 'click', () => {
+			this.telemetryService.publicLog2<GettingStartedActionEvent, GettingStartedActionClassification>('gettingStarted.ActionExecuted', { command, argument: undefined, walkthroughId: undefined });
+			void this.commandService.executeCommand(command);
+		}));
+		return button;
+	}
 	private buildRecentlyOpenedList(): GettingStartedIndexList<RecentEntry> {
 		const renderRecent = (recent: RecentEntry) => {
 			let fullPath: string;

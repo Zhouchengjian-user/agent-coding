@@ -1,4 +1,4 @@
-/* finesse · register=product · shell=welcome-canvas+quick-actions · A=warm-stone+amber-teal · B=system-760/520 · C=two-column-card-deck · D=feedback-only · E=layered-horizon · SOUL=7 SPECTACLE=2 DENSITY=6 */
+/* finesse · register=product · shell=welcome-canvas+quick-actions · A=graphite-on-warm-paper · B=system-600/400 · C=flat-hairline-cards · D=feedback-only · E=quiet-paper · SOUL=5 SPECTACLE=1 DENSITY=7 */
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -1267,7 +1267,7 @@
 }
 
 /* Agent coding warm welcome surface */
-.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer {
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer {
 	--agent-welcome-card: rgba(43, 42, 39, 0.94);
 	--agent-welcome-card-hover: rgba(56, 53, 48, 0.98);
 	--agent-welcome-border: rgba(255, 248, 237, 0.1);
@@ -1278,7 +1278,7 @@
 	background: #1A1C1D;
 }
 
-.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories {
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories {
 	position: relative;
 	isolation: isolate;
 	padding: 24px 32px;
@@ -1287,7 +1287,7 @@
 		url('./agent-coding-horizon.svg') center bottom / cover no-repeat;
 }
 
-.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories::before {
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories::before {
 	content: '';
 	position: absolute;
 	inset: 0;
@@ -1296,7 +1296,7 @@
 	pointer-events: none;
 }
 
-.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories > .gettingStartedCategoriesContainer {
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories > .gettingStartedCategoriesContainer {
 	max-width: 980px;
 	grid-template-rows: minmax(132px, 22%) minmax(0, auto) min-content;
 	grid-template-columns: minmax(0, 1fr) 18px minmax(0, 1fr);
@@ -1307,12 +1307,12 @@
 	align-content: center;
 }
 
-.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories > .gettingStartedCategoriesContainer > .header {
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories > .gettingStartedCategoriesContainer > .header {
 	align-self: center;
 	padding: 8px 4px 20px;
 }
 
-.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories > .gettingStartedCategoriesContainer > .header h1 {
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories > .gettingStartedCategoriesContainer > .header h1 {
 	padding: 0;
 	color: var(--agent-welcome-ink);
 	font-size: 42px;
@@ -1322,7 +1322,7 @@
 	text-wrap: balance;
 }
 
-.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories > .gettingStartedCategoriesContainer > .header .subtitle {
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories > .gettingStartedCategoriesContainer > .header .subtitle {
 	margin-top: 10px;
 	color: var(--agent-welcome-muted);
 	font-size: 17px;
@@ -1330,7 +1330,7 @@
 	letter-spacing: -0.01em;
 }
 
-.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories > .gettingStartedCategoriesContainer > .categories-column {
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories > .gettingStartedCategoriesContainer > .categories-column {
 	min-width: 0;
 	padding: 18px;
 	border: 1px solid var(--agent-welcome-border);
@@ -1339,15 +1339,15 @@
 	box-shadow: 0 24px 60px -44px rgba(12, 10, 7, 0.88);
 }
 
-.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories > .gettingStartedCategoriesContainer > .categories-column > div {
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories > .gettingStartedCategoriesContainer > .categories-column > div {
 	margin-bottom: 22px;
 }
 
-.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories > .gettingStartedCategoriesContainer > .categories-column > div:last-child {
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories > .gettingStartedCategoriesContainer > .categories-column > div:last-child {
 	margin-bottom: 0;
 }
 
-.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories h2 {
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories h2 {
 	margin-bottom: 12px;
 	color: var(--agent-welcome-ink);
 	font-size: 15px;
@@ -1355,23 +1355,23 @@
 	letter-spacing: -0.01em;
 }
 
-.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .index-list.start-container {
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .index-list.start-container {
 	min-height: 0;
 	margin-bottom: 20px;
 }
 
-.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .start-container ul {
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .start-container ul {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 	gap: 10px;
 	line-height: 1.3;
 }
 
-.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .start-container li {
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .start-container li {
 	min-width: 0;
 }
 
-.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .start-container .button-link {
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .start-container .button-link {
 	display: flex;
 	align-items: center;
 	gap: 10px;
@@ -1388,23 +1388,23 @@
 	transition: background-color 120ms ease, border-color 120ms ease, transform 120ms ease;
 }
 
-.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .start-container li:first-child .button-link {
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .start-container li:first-child .button-link {
 	border-color: rgba(217, 170, 97, 0.3);
 	background: rgba(99, 73, 39, 0.48);
 }
 
-.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .start-container .button-link:hover {
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .start-container .button-link:hover {
 	border-color: rgba(217, 170, 97, 0.28);
 	background: var(--agent-welcome-card-hover);
 	transform: translateY(-1px);
 }
 
-.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .start-container .icon-widget {
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .start-container .icon-widget {
 	color: var(--agent-welcome-accent);
 	font-size: 22px;
 }
 
-.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .getting-started-category {
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .getting-started-category {
 	width: 100%;
 	min-height: 58px;
 	margin: 0 0 10px;
@@ -1416,64 +1416,435 @@
 	transition: background-color 120ms ease, border-color 120ms ease, transform 120ms ease;
 }
 
-.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .getting-started-category:hover {
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .getting-started-category:hover {
 	border-color: rgba(105, 199, 183, 0.26);
 	background: var(--agent-welcome-card-hover);
 	transform: translateY(-1px);
 }
 
-.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .getting-started-category .featured-icon,
-.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .getting-started-category .icon-widget {
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .getting-started-category .featured-icon,
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .getting-started-category .icon-widget {
 	color: var(--agent-welcome-partner);
 }
 
-.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .category-title {
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .category-title {
 	color: var(--agent-welcome-ink);
 	font-size: 13px;
 	font-weight: 620;
 }
 
-.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .description-content {
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .description-content {
 	color: var(--agent-welcome-muted);
 	font-size: 12px;
 	line-height: 1.45;
 }
 
-.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .recently-opened li {
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .recently-opened li {
 	min-height: 30px;
 	padding: 3px 8px 3px 4px;
 	border-radius: 8px;
 }
 
-.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .recently-opened li:hover {
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .recently-opened li:hover {
 	background: rgba(255, 248, 237, 0.05);
 }
 
-.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .footer {
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .footer {
 	width: 100%;
 	padding-top: 14px;
 	color: var(--agent-welcome-muted);
 }
 
-.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .footer .agents-banner {
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .footer .agents-banner {
 	display: none;
 }
 
-.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .showOnStartup {
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .showOnStartup {
 	justify-content: flex-start;
 	margin: 0;
 }
 
-.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer.width-semi-constrained .gettingStartedSlideCategories > .gettingStartedCategoriesContainer,
-.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer.height-constrained .gettingStartedSlideCategories > .gettingStartedCategoriesContainer {
+/* Agent coding product home */
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories > .gettingStartedCategoriesContainer.agent-coding-home {
+	display: grid;
+	grid-template: minmax(150px, 1fr) auto minmax(84px, 1fr) / minmax(0, 1fr);
+	grid-template-areas:
+		"header"
+		"main"
+		"footer";
+	align-content: stretch;
+	width: min(100%, 1024px);
+	max-width: 1024px;
+	min-height: 680px;
+	margin: 0 auto;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-coding-home > .agent-home-header {
+	grid-area: header;
+	align-self: end;
+	padding: 8px 24px 44px;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-coding-home > .agent-home-header h1 {
+	margin: 0;
+	padding: 0;
+	color: var(--agent-welcome-ink);
+	font-size: clamp(48px, 6vw, 72px);
+	font-weight: 760;
+	letter-spacing: -0.045em;
+	line-height: 1;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-title-accent {
+	color: #F0BE6F;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-coding-home > .agent-home-header .subtitle {
+	margin: 14px 0 0;
+	color: #B8B3AD;
+	font-size: 26px;
+	font-weight: 620;
+	letter-spacing: -0.025em;
+	line-height: 1.2;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-main {
+	grid-area: main;
+	min-width: 0;
+	padding: 0 24px;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-actions {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 24px;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-action {
+	position: relative;
+	display: grid;
+	grid-template: 52px auto 1fr / 1fr 28px;
+	grid-template-areas:
+		"icon icon"
+		"title title"
+		"description arrow";
+	min-width: 0;
+	min-height: 188px;
+	padding: 24px;
+	overflow: hidden;
+	border: 1px solid rgba(255, 248, 237, 0.12);
+	border-radius: 18px;
+	background: rgba(52, 51, 49, 0.86);
+	box-shadow: 0 20px 46px -34px rgba(8, 7, 5, 0.9);
+	color: var(--agent-welcome-ink);
+	font: inherit;
+	text-align: left;
+	cursor: pointer;
+	transition: border-color 120ms ease, background-color 120ms ease, transform 120ms ease;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-action::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(145deg, rgba(255, 255, 255, 0.055), transparent 52%);
+	pointer-events: none;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-action-create {
+	border-color: rgba(240, 190, 111, 0.28);
+	background: rgba(74, 62, 48, 0.88);
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-action-open {
+	background: rgba(43, 58, 60, 0.84);
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-action:hover {
+	border-color: rgba(240, 190, 111, 0.42);
+	background-color: rgba(64, 61, 56, 0.96);
+	transform: translateY(-2px);
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-action:focus-visible {
+	outline: 2px solid var(--vscode-focusBorder);
+	outline-offset: 3px;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-action-icon {
+	grid-area: icon;
+	align-self: start;
+	color: #F0BE6F;
+	font-size: 38px;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-action-open .agent-home-action-icon {
+	color: #63D4C2;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-action-learn .agent-home-action-icon {
+	color: #D4D1DC;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-action-title {
+	grid-area: title;
+	margin-top: 8px;
+	font-size: 20px;
+	font-weight: 680;
+	line-height: 1.25;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-action-description {
+	grid-area: description;
+	align-self: end;
+	color: #C9C4BC;
+	font-size: 14px;
+	line-height: 1.55;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-action-arrow {
+	grid-area: arrow;
+	align-self: end;
+	justify-self: end;
+	color: #D8D3CA;
+	font-size: 20px;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-main > .recently-opened {
+	max-width: 620px;
+	margin-top: 42px;
+	padding: 0 4px;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-main > .recently-opened h2 {
+	margin-bottom: 12px;
+	font-size: 20px;
+	font-weight: 680;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-main > .recently-opened .empty-recent {
+	color: #B8B3AD;
+	font-size: 14px;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-main > .recently-opened .empty-recent .button-link {
+	color: #63D4C2;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-coding-home > .agent-home-footer {
+	grid-area: footer;
+	align-self: end;
+	padding: 28px 28px 12px;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-coding-home > .agent-home-footer .showOnStartup {
+	font-size: 14px;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer.width-semi-constrained .gettingStartedSlideCategories > .gettingStartedCategoriesContainer.agent-coding-home,
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer.height-constrained .gettingStartedSlideCategories > .gettingStartedCategoriesContainer.agent-coding-home {
+	grid-template-rows: auto auto auto;
+	min-height: 0;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer.width-semi-constrained .agent-home-actions {
+	grid-template-columns: 1fr;
+	gap: 12px;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer.width-semi-constrained .agent-home-action {
+	grid-template: auto auto / 48px 1fr 24px;
+	grid-template-areas:
+		"icon title arrow"
+		"icon description arrow";
+	min-height: 96px;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer.width-semi-constrained .gettingStartedSlideCategories > .gettingStartedCategoriesContainer,
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer.height-constrained .gettingStartedSlideCategories > .gettingStartedCategoriesContainer {
 	grid-template-rows: auto auto auto;
 	align-content: start;
 }
 
 @media (prefers-reduced-motion: reduce) {
-	.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .button-link,
-	.monaco-workbench.vs-dark .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .getting-started-category {
+	.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .button-link,
+	.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .getting-started-category,
+	.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-action {
 		transform: none !important;
 		transition-duration: 0.01ms !important;
 	}
+}
+
+/* Agent coding · Refero ChatGPT graphite-on-paper skin.
+ * Layout remains owned by the product-home rules above; this layer changes only
+ * palette, typography, material and interaction feedback. */
+.monaco-workbench:is(.vs, .vs-dark) {
+	--agent-paper: #FBFBFA;
+	--agent-paper-subtle: #F6F6F4;
+	--agent-paper-raised: #FEFEFD;
+	--agent-ink: #11110F;
+	--agent-ink-secondary: #5D5D59;
+	--agent-ink-muted: #8B8B86;
+	--agent-hairline: rgba(17, 17, 15, 0.1);
+	--agent-hover-veil: rgba(17, 17, 15, 0.05);
+	--agent-active-veil: rgba(17, 17, 15, 0.09);
+	font-family: -apple-system-body, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.titlebar,
+.monaco-workbench:is(.vs, .vs-dark) .part.statusbar {
+	background: var(--agent-paper);
+	color: var(--agent-ink-secondary);
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.activitybar,
+.monaco-workbench:is(.vs, .vs-dark) .part.sidebar {
+	background: var(--agent-paper-subtle);
+	color: var(--agent-ink-secondary);
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.auxiliarybar,
+.monaco-workbench:is(.vs, .vs-dark) .part.editor,
+.monaco-workbench:is(.vs, .vs-dark) .part.panel {
+	background: var(--agent-paper);
+	color: var(--agent-ink);
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.activitybar,
+.monaco-workbench:is(.vs, .vs-dark) .part.sidebar,
+.monaco-workbench:is(.vs, .vs-dark) .part.auxiliarybar,
+.monaco-workbench:is(.vs, .vs-dark) .part.editor,
+.monaco-workbench:is(.vs, .vs-dark) .part.panel,
+.monaco-workbench:is(.vs, .vs-dark) .part.statusbar {
+	border-color: var(--agent-hairline) !important;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .titlebar-center .window-title,
+.monaco-workbench:is(.vs, .vs-dark) .command-center-center {
+	border-color: var(--agent-hairline) !important;
+	border-radius: 10px !important;
+	background: var(--agent-paper-raised) !important;
+	box-shadow: none !important;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .activitybar .action-item.checked .action-label,
+.monaco-workbench:is(.vs, .vs-dark) .activitybar .action-item:hover .action-label {
+	color: var(--agent-ink) !important;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer {
+	--agent-welcome-card: var(--agent-paper-raised);
+	--agent-welcome-card-hover: var(--agent-paper-subtle);
+	--agent-welcome-border: var(--agent-hairline);
+	--agent-welcome-accent: var(--agent-ink);
+	--agent-welcome-partner: var(--agent-ink-secondary);
+	--agent-welcome-ink: var(--agent-ink);
+	--agent-welcome-muted: var(--agent-ink-secondary);
+	background: var(--agent-paper);
+	color: var(--agent-ink);
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories {
+	background: var(--agent-paper);
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories::before,
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-action::before {
+	display: none;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-coding-home > .agent-home-header h1 {
+	color: var(--agent-ink);
+	font-size: clamp(44px, 5vw, 60px);
+	font-weight: 600;
+	letter-spacing: -0.04em;
+	line-height: 1.05;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-title-accent {
+	color: var(--agent-ink);
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-coding-home > .agent-home-header .subtitle {
+	color: var(--agent-ink-secondary);
+	font-size: 20px;
+	font-weight: 500;
+	letter-spacing: -0.02em;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-action {
+	border-color: var(--agent-hairline);
+	border-radius: 10px;
+	background: var(--agent-paper-raised);
+	box-shadow: none;
+	color: var(--agent-ink);
+	transition: background-color 100ms ease, border-color 100ms ease;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-action-create,
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-action-open {
+	border-color: var(--agent-hairline);
+	background: var(--agent-paper-raised);
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-action:hover {
+	border-color: rgba(17, 17, 15, 0.16);
+	background: var(--agent-paper-subtle);
+	transform: none;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-action:active {
+	background: #EEEEEB;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-action:focus-visible {
+	outline: 2px solid var(--agent-ink);
+	outline-offset: 2px;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-action-icon,
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-action-open .agent-home-action-icon,
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-action-learn .agent-home-action-icon {
+	color: var(--agent-ink-secondary);
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-action-title,
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-main > .recently-opened h2 {
+	color: var(--agent-ink);
+	font-weight: 600;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-action-description,
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-action-arrow,
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-main > .recently-opened .empty-recent,
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-coding-home > .agent-home-footer {
+	color: var(--agent-ink-secondary);
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-main > .recently-opened .empty-recent .button-link,
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer a:not(.hide-category-button) {
+	color: var(--agent-ink);
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .getting-started-checkbox {
+	border-color: var(--agent-hairline) !important;
+	background: var(--agent-paper-raised) !important;
+	color: var(--agent-ink) !important;
+}
+
+/* The selected product layout keeps its three primary actions in one row at the
+ * standard desktop width, including when the editor marks itself constrained. */
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-actions {
+	display: grid !important;
+	grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+	gap: 24px !important;
+}
+
+.monaco-workbench:is(.vs, .vs-dark) .part.editor > .content .gettingStartedContainer .agent-home-action {
+	grid-template: 52px auto 1fr / 1fr 28px !important;
+	grid-template-areas:
+		"icon icon"
+		"title title"
+		"description arrow" !important;
+	min-height: 188px;
 }

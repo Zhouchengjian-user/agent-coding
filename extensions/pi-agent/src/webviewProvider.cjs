@@ -220,6 +220,80 @@ function withEditorContext(prompt) {
 	return `<ide_context>\n${context.join('\n\n')}\n</ide_context>\n\n${prompt}`;
 }
 
+async function createAgentProduct() {
+	const projectName = await vscode.window.showInputBox({
+		title: vscode.l10n.t('Create an Agent product'),
+		prompt: vscode.l10n.t('Name your new Agent product.'),
+		placeHolder: vscode.l10n.t('For example: Customer service assistant'),
+		ignoreFocusOut: true,
+		validateInput: validateProjectName
+	});
+	if (!projectName) {
+		return;
+	}
+
+	const parentSelection = await vscode.window.showOpenDialog({
+		title: vscode.l10n.t('Choose where to create the project'),
+		openLabel: vscode.l10n.t('Create here'),
+		canSelectFiles: false,
+		canSelectFolders: true,
+		canSelectMany: false
+	});
+	if (!parentSelection?.[0]) {
+		return;
+	}
+
+	const trimmedName = projectName.trim();
+	const projectUri = vscode.Uri.joinPath(parentSelection[0], trimmedName);
+	if (await resourceExists(projectUri)) {
+		void vscode.window.showErrorMessage(vscode.l10n.t('A folder named "{0}" already exists. Choose another project name.', trimmedName));
+		return;
+	}
+
+	await vscode.window.withProgress({
+		location: vscode.ProgressLocation.Notification,
+		title: vscode.l10n.t('Creating {0}', trimmedName),
+		cancellable: false
+	}, async () => {
+		await vscode.workspace.fs.createDirectory(projectUri);
+		await writeProjectStarter(projectUri, trimmedName);
+	});
+
+	await vscode.commands.executeCommand('vscode.openFolder', projectUri, false);
+}
+
+async function writeProjectStarter(projectUri, projectName) {
+	const readme = `# ${projectName}\n\n这是一个由 Agent coding 创建的 Agent 产品项目。\n`;
+	await vscode.workspace.fs.writeFile(vscode.Uri.joinPath(projectUri, 'README.md'), Buffer.from(readme, 'utf8'));
+}
+
+function validateProjectName(value) {
+	const projectName = String(value ?? '').trim();
+	if (!projectName) {
+		return vscode.l10n.t('Enter a project name.');
+	}
+	if (projectName === '.' || projectName === '..' || /[\\/:*?"<>|]/.test(projectName)) {
+		return vscode.l10n.t('The project name contains characters that cannot be used in a folder name.');
+	}
+	return undefined;
+}
+
+async function resourceExists(uri) {
+	try {
+		await vscode.workspace.fs.stat(uri);
+		return true;
+	} catch (error) {
+		if (isFileNotFound(error)) {
+			return false;
+		}
+		throw error;
+	}
+}
+
+function isFileNotFound(error) {
+	return error instanceof vscode.FileSystemError && error.code === 'FileNotFound';
+}
+
 function getStrings() {
 	return {
 		welcomeTitle: vscode.l10n.t('What do you want to build?'),
@@ -267,4 +341,4 @@ function escapeHtml(value) {
 	return value.replace(/[&<>'"]/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' })[character]);
 }
 
-module.exports = { PiAgentViewProvider };
+module.exports = { PiAgentViewProvider, createAgentProduct };
